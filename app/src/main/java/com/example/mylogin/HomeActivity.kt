@@ -16,15 +16,14 @@ class HomeActivity : AppCompatActivity() {
         // intent.getStringExtra("전달했던 데이터의 이름표")
         val imgView1 = findViewById<ImageView>(R.id.imgView1)
         val tv_id = findViewById<TextView>(R.id.tv_id)
-        rollDice()
+        rollImg()
         tv_id.text = info_id
         val btn_exit = findViewById<Button>(R.id.btn_exit)
         btn_exit.setOnClickListener {
             finish()
         }
     }
-
-    fun rollDice(){
+    fun rollImg(){
         val imgView1 = findViewById<ImageView>(R.id.imgView1)
         val random = Random
         val image = random.nextInt(6)
@@ -38,10 +37,7 @@ class HomeActivity : AppCompatActivity() {
         }
         // 이미지뷰 업데이트
         imgView1.setImageResource(resultImage)
-
+        // contentDescription 업데이트
         imgView1.contentDescription = image.toString()
-
     }
-
-
 }

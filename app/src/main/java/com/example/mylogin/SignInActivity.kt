@@ -28,7 +28,7 @@ class SignInActivity : AppCompatActivity() {
                 val subPwTextValue = data?.getStringExtra("pw")
 
                 subIdTextValue?.let{
-                    et_login.setText(it)
+                    et_login.setText(it)  //
                 }
 
                 subPwTextValue.let{
